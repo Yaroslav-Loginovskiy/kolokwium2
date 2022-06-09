@@ -19,7 +19,8 @@ namespace kolokwium2.Services
         {
             var musician = _context.Musicians
                  .Include(a => a.Musician_Tracks)
-               
+                 .ThenInclude(a => a.IdTrackNav)
+                 .ThenInclude(a => a.IdAlbumNav); 
 
         }
 
